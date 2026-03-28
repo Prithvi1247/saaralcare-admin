@@ -4,8 +4,7 @@ import "./AdminPage.css";
 
 // ─── Supabase client (initialized once, outside the component) ────────────────
 const supabase = createClient(
-  "https://ththypweoebehbhhbkug.supabase.co",
-  "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InRodGh5cHdlb2ViZWhiaGhia3VnIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzMyOTY1NjIsImV4cCI6MjA4ODg3MjU2Mn0.CUYlInb2p_odv0d55p93ZPlXWuT8uc5g6AWWTsqAaJ4"
+ \
 );
 
 // ─── Component ────────────────────────────────────────────────────────────────
