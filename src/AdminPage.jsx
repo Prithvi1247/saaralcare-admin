@@ -64,6 +64,7 @@ export default function WorkoutRecord() {
   };
 
   // ── Insert record into rainfall_events ───────────────────────────────────
+  // ── Insert record into rainfall_events ───────────────────────────────────
   const handleAddRecord = async () => {
     setMessage("");
     setIsError(false);
@@ -78,7 +79,8 @@ export default function WorkoutRecord() {
     setLoading(true);
 
     try {
-      const payload = { station_id, rainfall_mm, rainfall_duration_hrs };
+      // FIX: Added zone_name to the payload here 👇
+      const payload = { zone_name, station_id, rainfall_mm, rainfall_duration_hrs };
       console.log("Inserting payload:", payload);
 
       const { data, error } = await supabase
@@ -120,7 +122,6 @@ export default function WorkoutRecord() {
       setLoading(false);
     }
   };
-
   // ── Derived class for result message ──────────────────────────────────────
   const resultClass = `result${isError ? " error" : message ? " success" : ""}`;
 
