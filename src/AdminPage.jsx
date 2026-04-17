@@ -9,7 +9,6 @@ const supabase = createClient(
 );
 
 
-
 const styles = `
   @import url('https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
 
@@ -481,12 +480,12 @@ export default function AdminPage({ onNavigateToDashboard, onSignOut }) {
     sessionStorage.removeItem("admin_authed");
     sessionStorage.removeItem("admin_user");
     if (onSignOut) onSignOut();
-    else window.location.href = "AdminLogin.jsx";
+    else window.location.href = "/";
   };
 
   const handleBack = () => {
     if (onNavigateToDashboard) onNavigateToDashboard();
-    else window.location.href = "AdminDashboard.jsx";
+    else window.location.href = "/dashboard";
   };
 
   const resultClass = "result" + (isError ? " error" : message ? " success" : "");

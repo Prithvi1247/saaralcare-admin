@@ -424,7 +424,7 @@ export default function AdminLogin({ onLoginSuccess }) {
         setSuccess(true);
         setTimeout(() => {
           if (onLoginSuccess) onLoginSuccess();
-          else window.location.href = "AdminDashboard.jsx";
+          else window.location.href = "/dashboard";
         }, 1400);
       } else {
         setErrorMsg("Invalid username or password. Please try again.");

@@ -10,6 +10,9 @@ const supabase = createClient(
   );
 
 
+// ─────────────────────────────────────────────────
+// ZoneLineGraph component
+// ─────────────────────────────────────────────────
 function ZoneLineGraph({ data }) {
   const W = 480, H = 110, PAD = { top: 12, right: 16, bottom: 28, left: 36 };
   const innerW = W - PAD.left - PAD.right;
@@ -659,7 +662,7 @@ export default function AdminDashboard({ onNavigateToAdminPage, onLogout }) {
 
   function goToAdminPage() {
     if (onNavigateToAdminPage) onNavigateToAdminPage();
-    else window.location.href = "AdminPage.jsx";
+    else window.location.href = "/admin-page";
   }
 
   // ── Fetch functions ──
@@ -847,7 +850,7 @@ export default function AdminDashboard({ onNavigateToAdminPage, onLogout }) {
     sessionStorage.removeItem("admin_authed");
     sessionStorage.removeItem("admin_user");
     if (onLogout) onLogout();
-    else window.location.href = "AdminLogin.jsx";
+    else window.location.href = "/";
   }
 
   // ── Payout type helpers ──
