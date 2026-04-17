@@ -413,7 +413,7 @@ export default function AdminPage({ onNavigateToDashboard, onSignOut }) {
     const peakPayload = {
       zone_name,
       station_id,
-      rainfall_mm: parseFloat(rainfall_peak_mm) * 1.5
+      rainfall_mm: parseFloat(rainfall_peak_mm) * 1
     };
 
     const nonPeakPayload = {
