@@ -474,6 +474,8 @@ export default function AdminLogin({ onLoginSuccess }) {
 
           <div className="login-title">Sign In</div>
           <div className="login-desc">Enter your credentials to access the admin panel.</div>
+          <div className="login-desc">USERNAME : GUIDEWIRE</div>
+          <div className="login-desc">PASSWORD : DEVTRAILS</div>
 
           {/* Error banner */}
           {errorMsg && (
